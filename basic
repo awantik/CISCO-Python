@@ -1,0 +1,452 @@
+Python 2.7.6 (default, Jun 22 2015, 17:58:13) 
+[GCC 4.8.2] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+>>> 
+>>> 
+>>> 
+>>> help(str)
+
+>>> 
+>>> 
+>>> 
+>>> s = 'hello how are you'
+>>> s[3:8]
+'lo ho'
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> s
+'hello how are you'
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> t = "hello how are you"
+>>> 
+>>> 
+>>> s
+'hello how are you'
+>>> t
+'hello how are you'
+>>> t = "hello how i don't are you"
+>>> t = 'hello how i don"t are you'
+>>> 
+>>> 
+>>> s
+'hello how are you'
+>>> 
+>>> 
+>>> s[0] = 'g'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+>>> 
+>>> 
+>>> 
+>>> s
+'hello how are you'
+>>> s = 'hik'
+>>> s[0]
+'h'
+>>> s
+'hik'
+>>> 
+>>> t = "hello how i don't are you"
+>>> 
+>>> 
+>>> t[4:9]
+'o how'
+>>> t[:9]
+'hello how'
+>>> t[-1]
+'u'
+>>> t[:-1]
+"hello how i don't are yo"
+>>> t[-5:-1]
+'e yo'
+>>> t[::-1]
+"uoy era t'nod i woh olleh"
+>>> t
+"hello how i don't are you"
+>>> a = 'HelloHow'
+>>> 
+>>> b = 'abc'
+>>> c = 'def'
+>>> b + c
+'abcdef'
+>>> 
+>>> 
+>>> a[-3:]
+'How'
+>>> a[-3:]+a[:4]
+'HowHell'
+>>> a[-3:]+a[:5]
+'HowHello'
+>>> 
+>>> 
+>>> 
+>>> 
+>>> help(str)
+
+>>> s
+'hik'
+>>> t
+"hello how i don't are you"
+>>> t.count(' ')
+5
+>>> t.count('ow')
+1
+>>> help(str)
+
+>>> t.capitalize()
+"Hello how i don't are you"
+>>> t
+"hello how i don't are you"
+>>> 
+>>> 
+>>> help(str)
+
+>>> a
+'HelloHow'
+>>> t.endswith('How')
+False
+>>> a.endswith('How')
+True
+>>> 
+>>> 
+>>> a='www.google.com'
+>>> a.endswith('.com')
+True
+>>> a.endswith('.in')
+False
+>>> 
+>>> 
+>>> 
+>>> u = 'http://www.google.co.in'
+>>> u.startswith('http') and u.endswith('.in')
+True
+>>> u.endswith('.pk') or u.endswith('.in')
+True
+>>> 
+>>> 
+>>> 
+>>> 
+>>> help(str)
+
+>>> s = 'this is a nice is it to is'
+>>> s.find('is')
+2
+>>> s.find('is',2+1)
+5
+>>> s.find('is',5+1)
+15
+>>> s.find('is',15+1)
+24
+>>> s.find('is',24+1)
+-1
+>>> s.find('is',15+1)
+24
+>>> s = 'Hello Mr/Miss/Mrs {name} , congrats you got {percent}% hike'
+>>> s.format('Abhijit',100)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'name'
+>>> s.format(name='Abhijit',percent=100)
+'Hello Mr/Miss/Mrs Abhijit , congrats you got 100% hike'
+>>> 
+>>> 
+>>> s.format(name='Prathik',percent=200)
+'Hello Mr/Miss/Mrs Prathik , congrats you got 200% hike'
+>>> 
+>>> 
+>>> 
+>>> help(str)
+
+>>> help(str)
+
+>>> s = 'abc123'
+>>> s.isalnum()
+True
+>>> s = 'abc 123'
+>>> s.isalnum()
+False
+>>> 
+>>> help(str)
+
+>>> s=55
+>>> s='55'
+>>> s.isdigit()
+True
+>>> int(s)
+55
+>>> s
+'55'
+>>> raw_input('Data ')
+Data 0
+'0'
+>>> 
+>>> d  = raw_input('Data ')
+Data 12
+>>> type(d)
+<type 'str'>
+>>> help(str)
+
+>>> s = ' hello how are you '
+>>> s.strip()
+'hello how are you'
+>>> s = ' hello how are you \n '
+>>> s.strip()
+'hello how are you'
+>>> s.lstrip()
+'hello how are you \n '
+>>> s.rstrip()
+' hello how are you'
+>>> s.strip()
+'hello how are you'
+>>> 
+>>> 
+>>> s
+' hello how are you \n '
+>>> 
+>>> 
+>>> help(str)
+
+>>> f = 4.5
+>>> type(f)
+<type 'float'>
+>>> 
+>>> 
+>>> f = '4.5'
+>>> 
+>>> 
+>>> 
+>>> f.partition('.')
+('4', '.', '5')
+>>> f = '490.57'
+>>> f.partition('4')
+('', '4', '90.57')
+>>> f.partition('0')
+('49', '0', '.57')
+>>> 
+>>> 
+>>> 
+>>> f.partition('.')
+('490', '.', '57')
+>>> l,s,r = f.partition('.')
+>>> l
+'490'
+>>> s
+'.'
+>>> r
+'57'
+>>> l.isdigit() and r.isdigit() and s == '.'
+True
+>>> f = '490.5.7'
+>>> l,s,r = f.partition('.')
+>>> l.isdigit() and r.isdigit() and s == '.'
+False
+>>> help(str)
+
+>>> s = 'this is good but is great'
+>>> s.replace('is','are')
+'thare are good but are great'
+>>> s
+'this is good but is great'
+>>> 
+>>> 
+>>> 
+>>> s.replace(' is '','are')
+  File "<stdin>", line 1
+    s.replace(' is '','are')
+                         ^
+SyntaxError: invalid syntax
+>>> s.replace(' is ','are')
+'thisaregood butaregreat'
+>>> s.replace(' is ',' are ')
+'this are good but are great'
+>>> help(str)
+
+>>> 
+>>> 
+>>> help(str)
+
+>>> 
+>>> from string import trans
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: cannot import name trans
+>>> from string import maptrans
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: cannot import name maptrans
+>>> help(str)
+
+>>> from string import maketrans
+>>> 
+>>> 
+>>> tab = maketrans('aeiou','12345')
+>>> s = 'hello all how are you'
+>>> s.translate(tab)
+'h2ll4 1ll h4w 1r2 y45'
+>>> 
+>>> 
+>>> help(str)
+
+>>> s = 'hello all how are you'
+>>> 
+>>> 
+>>> s.translate(tab, ' ')
+'h2ll41llh4w1r2y45'
+>>> s.translate(tab)
+'h2ll4 1ll h4w 1r2 y45'
+>>> s.translate(tab, ' y')
+'h2ll41llh4w1r245'
+>>> s.translate(tab, ' 1')
+'h2ll41llh4w1r2y45'
+>>> 
+>>> 
+>>> s = 'hello @how #are @you'
+>>> tab = maketrans('aeiou','12345')
+>>> 
+>>> s.translate(tab, '@#')
+'h2ll4 h4w 1r2 y45'
+>>> 
+>>> 
+>>> l = []
+>>> l = list()
+>>> 
+>>> l = [1,2.2,'hello',89]
+>>> l
+[1, 2.2, 'hello', 89]
+>>> 
+>>> 
+>>> help(list)
+
+>>> l.append('55')
+>>> l
+[1, 2.2, 'hello', 89, '55']
+>>> l.append(55)
+>>> 
+>>> l
+[1, 2.2, 'hello', 89, '55', 55]
+>>> len(l)
+6
+>>> len(s)
+20
+>>> s
+'hello @how #are @you'
+>>> 
+>>> 
+>>> 
+>>> l1 = [1,2,3]
+>>> l2 = [5,6,7] 
+>>> l1.extend(l2)
+>>> l1
+[1, 2, 3, 5, 6, 7]
+>>> l2
+[5, 6, 7]
+>>> 
+>>> 
+>>> l2 = [5,6,7] 
+>>> l1 = [1,2,3]
+>>> 
+>>> 
+>>> l1.append(l2)
+>>> l1
+[1, 2, 3, [5, 6, 7]]
+>>> l1[-1]
+[5, 6, 7]
+>>> l1[-1][2]='hello'
+>>> 
+>>> l1
+[1, 2, 3, [5, 6, 'hello']]
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> l
+[1, 2.2, 'hello', 89, '55', 55]
+>>> 
+>>> 
+>>> l1
+[1, 2, 3, [5, 6, 'hello']]
+>>> 
+>>> [1, 2, 3, [5, 6, 'hello','hi']]
+[1, 2, 3, [5, 6, 'hello', 'hi']]
+>>> 
+>>> 
+>>> 
+>>> l1[-1].append('hii')
+>>> l1
+[1, 2, 3, [5, 6, 'hello', 'hii']]
+>>> 
+>>> 
+>>> 
+>>> l1[-1].insert(2,'hii')
+>>> l1[-1].insert(2,'hiiyo')
+>>> l1
+[1, 2, 3, [5, 6, 'hiiyo', 'hii', 'hello', 'hii']]
+>>> 
+>>> 
+>>> help(list)
+
+>>> l1
+[1, 2, 3, [5, 6, 'hiiyo', 'hii', 'hello', 'hii']]
+>>> l1.pop(3)
+[5, 6, 'hiiyo', 'hii', 'hello', 'hii']
+>>> l1
+[1, 2, 3]
+>>> 
+>>> 
+>>> l1.remove(2)
+>>> l1
+[1, 3]
+>>> l1 = [1,2,2,3,3,3,3,212,2]
+>>> l1.remove(2)
+>>> l1
+[1, 2, 3, 3, 3, 3, 212, 2]
+>>> 
+>>> 
+>>> l
+[1, 2.2, 'hello', 89, '55', 55]
+>>> l.reverse()
+>>> l
+[55, '55', 89, 'hello', 2.2, 1]
+>>> 
+>>> 
+>>> 
+>>> 
+>>> l = [1,22,3,111,4]
+>>> l.sort()
+>>> l
+[1, 3, 4, 22, 111]
+>>> l.sort(reverse=True)
+>>> l
+[111, 22, 4, 3, 1]
+>>> l
+[111, 22, 4, 3, 1]
+>>> s = 'hello friends, hope we all are in sync'
+>>> 
+>>> s.split()
+['hello', 'friends,', 'hope', 'we', 'all', 'are', 'in', 'sync']
+>>> l = s.split()
+>>> l
+['hello', 'friends,', 'hope', 'we', 'all', 'are', 'in', 'sync']
+>>> l.sort()
+>>> l
+['all', 'are', 'friends,', 'hello', 'hope', 'in', 'sync', 'we']
+>>> 
+>>> 
+>>> ' '.join(l)
+'all are friends, hello hope in sync we'
+>>> 
+>>> 
+>>> s = 'hello, all ahow, is yhis'
+>>> s.split(',')
+['hello', ' all ahow', ' is yhis']
+>>> 
